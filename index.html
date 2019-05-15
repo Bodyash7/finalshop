@@ -229,25 +229,33 @@ document.getElementById('time').innerHTML = h + ':' + m + ':' + s;
 	</section>
 	<!---Contact us--->
 <div class=container>
+	<center>
 	<h2>Contact us</h2>
-	<form>
-	  <div class="form-group">
-	    <label for="exampleFormControlInput1">Name</label>
-	    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter the name">
-	  </div>
-	  <div class="form-group">
-	    <label for="exampleFormControlInput1">Last Name</label>
-	    <input type="surname" class="form-control" id="exampleFormControlInput1" placeholder="Enter the last name">
-	  </div>
-	  <div class="form-group">
-	    <label for="exampleFormControlInput1">E-mail</label>
-	    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
-	  </div>
-	  <div class="form-group">
-	    <label for="exampleFormControlTextarea1">Comment</label>
-	    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-	  </div>
-	</form>
+	</center>
+
+	<form action="https://formspree.io/mrbodyash@gmail.com" method="POST">
+	<label for="client-name">Name:</label>
+            <input type="text" placeholder="Name"
+             id="client-name" name="client-name" required>
+            <br>
+            <label>
+                Email: <input type="email" name="client-email" placeholder="Email" required>
+            </label>
+            <br>
+            <label>Gender:</label>
+            <label><input type="radio" value="male" name="gender" checked>Male</label>
+            <label><input type="radio" value="female" name="gender">Female</label>
+            <label><input type="radio" value="other" name="gender">Other</label>
+            <br>
+            <label>
+                Your comment:
+                <br>
+                <textarea name="comments"></textarea>
+            </label>
+            <br>
+            <input type="reset">
+            <input type="submit">
+        </form>
 </div>
 
 	<!---Testimonials--->
